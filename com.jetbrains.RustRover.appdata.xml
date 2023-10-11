@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.jetbrains.RustRover</id>
+  <metadata_license>CC-BY-SA</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>RustRover</name>
+  <summary>A cross-platform IDE for Rust development</summary>
+  <description>
+    <p>Trust RustRover to take care of the routine while you focus on the important things. Knowing your code through
+      and through, it can boost your productivity with smart and relevant code completion, instant navigation and
+      reliable refactorings.
+    </p>
+    <p>RustRover is available for a free 30-day evaluation. Monthly and yearly subscription options are available for
+      companies and individual users.
+    </p>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by JetBrains s.r.o.</p>
+  </description>
+  <url type="bugtracker">https://youtrack.jetbrains.com/</url>
+  <url type="help">https://www.jetbrains.com/help/rust/</url>
+  <url type="homepage">http://www.jetbrains.com/rust/</url>
+  <launchable type="desktop-id">com.jetbrains.RustRover.desktop</launchable>
+  <developer_name>JetBrains s.r.o.</developer_name>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://www.jetbrains.com/rust/img/overview/Develop_applications_for_web.png</image>
+    </screenshot>
+  </screenshots>
+  <update_contact>andi@appelgriebsch.com</update_contact>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="2023.3" date="2023-10-11"/>
+  </releases>
+</component>

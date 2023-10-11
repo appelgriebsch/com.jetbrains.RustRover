@@ -1,0 +1,86 @@
+app-id: com.jetbrains.RustRover
+command: rustrover
+runtime: org.freedesktop.Sdk
+runtime-version: "23.08"
+sdk: org.freedesktop.Sdk
+separate-locales: false
+tags:
+  - proprietary
+finish-args:
+  - --allow=devel
+  - --device=dri
+  - --env=RUST_ROVER_PROPERTIES=/app/bin/idea.properties
+  - --filesystem=host
+  - --filesystem=xdg-run/keyring
+  - --filesystem=xdg-run/gnupg:ro
+  - --share=ipc
+  - --share=network
+  - --socket=ssh-auth
+  - --socket=wayland
+  - --socket=x11
+  - --talk-name=com.canonical.AppMenu.Registrar
+  - --talk-name=org.freedesktop.Flatpak
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.gnome.keyring.SystemPrompter
+
+add-extensions:
+  org.freedesktop.Sdk.Compat.i386:
+    directory: lib/i386-linux-gnu
+    version: "23.08"
+
+modules:
+  - shared-modules/libsecret/libsecret.json
+  - modules/jetbrains-flatpak-wrapper.yml
+
+  - modules/rsync.yml
+  - modules/gcr.yml
+  - modules/openssh.yml
+  - modules/pinentry.yml
+
+  - name: rustrover
+    buildsystem: simple
+    build-commands:
+      - install -D apply_extra /app/bin/apply_extra
+      - install -D -m644 -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
+      - install -D -m644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop
+      - install -D -m644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.appdata.xml
+      - cat idea.properties | tee -a ${FLATPAK_DEST}/bin/idea.properties
+      - mkdir -p /app/lib/i386-linux-gnu /app/lib/debug/lib/i386-linux-gnu
+    sources:
+      - type: script
+        dest-filename: apply_extra
+        commands:
+          - mkdir rustrover/
+          - tar -xzf rustrover.tar.gz --directory=rustrover/ --strip-components=1
+          - rm rustrover.tar.gz
+      - type: file
+        path: com.jetbrains.RustRover.appdata.xml
+      - type: file
+        path: com.jetbrains.RustRover.desktop
+      - type: file
+        path: com.jetbrains.RustRover.svg
+      - type: file
+        path: idea.properties
+      - type: extra-data
+        filename: rustrover.tar.gz
+        sha256: 3dd8e99b066164efc11e86e3289e444c5238dfce8e9142fe2d3a8c340eeeb175
+        size: 740693014
+        url: https://download.jetbrains.com/rustrover/RustRover-233.8264.22.tar.gz
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: jetbrains
+          code: RR
+          is-main-source: true
+      - type: extra-data
+        filename: rustrover.tar.gz
+        sha256: 812c33f46f8c7e309e777f10b6806b3658d7f90f95aa1a776c686aafabb290e7
+        size: 740979130
+        url: https://download.jetbrains.com/rustrover/RustRover-233.8264.22-aarch64.tar.gz
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: jetbrains
+          code: RR
+          is-main-source: true

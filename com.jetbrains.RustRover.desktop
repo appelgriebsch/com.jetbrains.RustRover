@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=RustRover
+Exec=rustrover
+Categories=Development;IDE;
+GenericName=A cross-platform IDE for Rust
+Icon=com.jetbrains.RustRover
+Keywords=rustrover;development;ide;
+StartupNotify=true
+StartupWMClass=jetbrains-rustrover
+Terminal=false
+Type=Application
