@@ -9,7 +9,7 @@ tags:
 finish-args:
   - --allow=devel
   - --device=dri
-  - --env=RUST_ROVER_PROPERTIES=/app/bin/idea.properties
+  - --env=RUSTROVER_PROPERTIES=/app/bin/idea.properties
   - --filesystem=host
   - --filesystem=xdg-run/keyring
   - --filesystem=xdg-run/gnupg:ro
