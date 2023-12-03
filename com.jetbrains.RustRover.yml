@@ -1,7 +1,7 @@
 app-id: com.jetbrains.RustRover
 command: rustrover
 runtime: org.freedesktop.Sdk
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:
@@ -32,7 +32,7 @@ finish-args:
 add-extensions:
   org.freedesktop.Sdk.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: "23.08"
+    version: '23.08'
 
 modules:
   # -----------------------------------------------------------------------------------------------
@@ -183,9 +183,9 @@ modules:
         path: idea.properties
       - type: extra-data
         filename: rustrover.tar.gz
-        sha256: 3dd8e99b066164efc11e86e3289e444c5238dfce8e9142fe2d3a8c340eeeb175
-        size: 740693014
-        url: https://download.jetbrains.com/rustrover/RustRover-233.8264.22.tar.gz
+        sha256: 8f523786bcfb0f112d1112c7c65f2fbda0112952357c931f215b628530c550cf
+        size: 777949235
+        url: https://download.jetbrains.com/rustrover/RustRover-233.10527.212.tar.gz
         only-arches:
           - x86_64
         x-checker-data:
@@ -194,9 +194,9 @@ modules:
           is-main-source: true
       - type: extra-data
         filename: rustrover.tar.gz
-        sha256: 812c33f46f8c7e309e777f10b6806b3658d7f90f95aa1a776c686aafabb290e7
-        size: 740979130
-        url: https://download.jetbrains.com/rustrover/RustRover-233.8264.22-aarch64.tar.gz
+        sha256: 6a3937bad6e5c5b9db477fad1baf891fff3701c9496e9d49a6d5407585a83969
+        size: 776107408
+        url: https://download.jetbrains.com/rustrover/RustRover-233.10527.212-aarch64.tar.gz
         only-arches:
           - aarch64
         x-checker-data:
