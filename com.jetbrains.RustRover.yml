@@ -183,9 +183,9 @@ modules:
         path: idea.properties
       - type: extra-data
         filename: rustrover.tar.gz
-        sha256: 07524c044de4565cbf052f9980044aa6c6e28064eefb3033587afa1e09ff69bf
-        size: 764184389
-        url: https://download.jetbrains.com/rustrover/RustRover-233.11799.284.tar.gz
+        sha256: 59cd5fac710b153efab94341594751bb50cdb1dff5d2292bb8067ec87085ad35
+        size: 764201694
+        url: https://download.jetbrains.com/rustrover/RustRover-233.11799.306.tar.gz
         only-arches:
           - x86_64
         x-checker-data:
@@ -194,9 +194,9 @@ modules:
           is-main-source: true
       - type: extra-data
         filename: rustrover.tar.gz
-        sha256: 62b276acfb0c0233e84dd332cad95d84dc5d751e04e51cad6f0675e676674594
-        size: 764086702
-        url: https://download.jetbrains.com/rustrover/RustRover-233.11799.284-aarch64.tar.gz
+        sha256: dd707c178a0eda9d47435a33dc0a8f2884f894753ed639f27e71609520e6952b
+        size: 764114936
+        url: https://download.jetbrains.com/rustrover/RustRover-233.11799.306-aarch64.tar.gz
         only-arches:
           - aarch64
         x-checker-data:
