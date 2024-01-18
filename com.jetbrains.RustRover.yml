@@ -72,8 +72,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        sha256: 60b7e9b9b4bca04405af58a2cd5dff3e68a5607c5bc39ee88a5256dd7a07f58c
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.0/git-lfs-linux-amd64-v3.4.0.tar.gz
+        sha256: 1772dc260961db27958088740b7e9ecebf945abad8c2d504d412448f53faf147
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.1/git-lfs-linux-amd64-v3.4.1.tar.gz
         x-checker-data:
           project-id: 11551
           stable-only: true
@@ -82,8 +82,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        sha256: aee90114f8f2eb5a11c1a6e9f1703a2bfcb4dc1fc4ba12a3a574c3a86952a5d0
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.0/git-lfs-linux-arm64-v3.4.0.tar.gz
+        sha256: f93c5070223d95eb44fea0ee2f2db26656793d5f3417366f77dd20b9518c46ce
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.1/git-lfs-linux-arm64-v3.4.1.tar.gz
         x-checker-data:
           project-id: 11551
           stable-only: true
@@ -183,9 +183,9 @@ modules:
         path: idea.properties
       - type: extra-data
         filename: rustrover.tar.gz
-        sha256: 59cd5fac710b153efab94341594751bb50cdb1dff5d2292bb8067ec87085ad35
-        size: 764201694
-        url: https://download.jetbrains.com/rustrover/RustRover-233.11799.306.tar.gz
+        sha256: b2e6f76b9eb1d7d68a0ac874954aa394be1426e07a767bdebf1a421021764c0a
+        size: 764947957
+        url: https://download.jetbrains.com/rustrover/RustRover-233.13135.116.tar.gz
         only-arches:
           - x86_64
         x-checker-data:
@@ -194,9 +194,9 @@ modules:
           is-main-source: true
       - type: extra-data
         filename: rustrover.tar.gz
-        sha256: dd707c178a0eda9d47435a33dc0a8f2884f894753ed639f27e71609520e6952b
-        size: 764114936
-        url: https://download.jetbrains.com/rustrover/RustRover-233.11799.306-aarch64.tar.gz
+        sha256: d55266527a2c0222cd504f70ca50b5f8a6745752155ae83109511c4583759278
+        size: 764857427
+        url: https://download.jetbrains.com/rustrover/RustRover-233.13135.116-aarch64.tar.gz
         only-arches:
           - aarch64
         x-checker-data:
